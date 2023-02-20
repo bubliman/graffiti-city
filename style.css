@@ -63,11 +63,13 @@
 h1, h2 {
     
     font-family: 'a_attack_graffitiregular';
-    -webkit-text-fill-color: var(--primary-color);
+    /* -webkit-text-fill-color: var(--primary-color); */
+    color: var(--primary-color);
     text-align:center;
+    font-weight: 400;
 }
 h1 {
-    font-weight: 400;
+    
     font-size: var(--font-h1-size);
     width:800px;
     margin:20px auto;
@@ -108,7 +110,48 @@ h1 {
 }
 h2 {
   font-size:var(--font-h2-size);
+  --blur:0px;
+  text-shadow: 
+      var(--outline3) var(--outline3) var(--blur) black,
+      var(--negline3) var(--outline3) var(--blur) black,
+      var(--outline3) var(--negline3) var(--blur) black,
+      var(--negline3) var(--negline3) var(--blur) black,
+      
+      var(--outline2) var(--outline2) var(--blur) black,
+      var(--negline2) var(--outline2) var(--blur) black,
+      var(--outline2) var(--negline2) var(--blur) black,
+      var(--negline2) var(--negline2) var(--blur) black,
+
+      var(--outline1) var(--outline1) var(--blur) black,
+      var(--negline1) var(--outline1) var(--blur) black,
+      var(--outline1) var(--negline1) var(--blur) black,
+      var(--negline1) var(--negline1) var(--blur) black,
+
+      8px 8px var(--shadow-color1),
+      10px 10px var(--shadow-color1);
 } 
+h2.showdown, h2.versus {
+  padding: 20px;
+  color:var(--secondary-color);
+  text-shadow: 
+      var(--outline3) var(--outline3) var(--blur) black,
+      var(--negline3) var(--outline3) var(--blur) black,
+      var(--outline3) var(--negline3) var(--blur) black,
+      var(--negline3) var(--negline3) var(--blur) black,
+      
+      var(--outline2) var(--outline2) var(--blur) black,
+      var(--negline2) var(--outline2) var(--blur) black,
+      var(--outline2) var(--negline2) var(--blur) black,
+      var(--negline2) var(--negline2) var(--blur) black,
+
+      var(--outline1) var(--outline1) var(--blur) black,
+      var(--negline1) var(--outline1) var(--blur) black,
+      var(--outline1) var(--negline1) var(--blur) black,
+      var(--negline1) var(--negline1) var(--blur) black,
+
+      8px 8px var(--shadow-color2),
+      10px 10px var(--shadow-color2);
+}
 
 body {
   margin: 0 26px;
