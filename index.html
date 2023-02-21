@@ -6,16 +6,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="images/favicon.png">
+        <link rel="icon" href="images/favicon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
+        <header id="main-header">
             <h1 translate="no">graffiti city</h1>
             <nav>
-                <a href=".">Home</a>
+                <a href="." class="current">Home</a>
                 <a href="gallery/">Gallery</a>
                 <a href="rules/">Rules</a>
             </nav>
@@ -25,27 +25,37 @@
                 <h2 id="showdown-h2-1" class="showdown" translate="no">artist</h2>
                 <h2 id="showdown-h2-2" class="showdown" translate="no">showdown</h2>
             </header>
-            <div class="showdown flex">
-            <img class="yellow" src="images/yellow-image.jpg" alt="Yellow image: a blue man's head with his hair on fire with red flames">
-            <h2 class="versus" alt="versus" translate="no">vs.</h2>
-            <img class="blue" src="images/blue-image.jpg" alt="Blue image: a ballerina wearing a red skirt and red boxing gloves is doing a twirl and charging for a boxing punch.">
+            <div class="showdown showdown-flex">
+                <img class="yellow" src="images/yellow-image.jpg" alt="Yellow image: a blue man's head with his hair on fire with red flames">
+                <h2 class="versus" alt="versus" translate="no">vs.</h2>
+                <img class="blue" src="images/blue-image.jpg" alt="Blue image: a ballerina wearing a red skirt and red boxing gloves is doing a twirl and charging for a boxing punch.">
             </div>
-            <div class="white-container">
+            <div class="white-container vote">
                 <div class="vote-bar">
                     <div class="side1">
-                        <p class="percentage">54%</p>
-                        <p class="artist">Artist: TRTOP</p>
-                        <p class="vote-count">5321 votes</p>
+                        <span class="percentage">54%</span>
+                        <span class="d artist">Artist: TRTOP</span>
+                        <span class="vote-count">5321 votes</span>
                     </div>
                     <div class="side2">
-                        <p class="percentage">46%</p>
-                        <p class="artist">Artist: PAC3R</p>
-                        <p class="vote-count">4485 votes</p>
+                        <span class="vote-count">4485 votes</span>
+                        <span class="d artist">Artist: PAC3R</span>
+                        <span class="percentage">46%</span>
                     </div>
-                    <button class="side1">Vote Yellow</button>
-                    <span class="date">Ends in 6 days 5 hrs 45 min 48 s</span>
-                    <button class="side1">Vote Blue</button>
                 </div>
+                <div class="m grid">
+                    <span class="m artist">Artist: PAC3R</span>
+                    <span class="m artist">Artist: TRTOP</span>
+                    <img class="m yellow mini" src="images/yellow-image.jpg" alt="Yellow image: a blue man's head with his hair on fire with red flames">
+                    <img class="m blue mini" src="images/blue-image.jpg" alt="Blue image: a ballerina wearing a red skirt and red boxing gloves is doing a twirl and charging for a boxing punch.">
+                    <button class="m side1">Vote Yellow</button>
+                    <button class="m side2">Vote Blue</button>
+                </div>
+                <div class="flex-buttons">
+                <button class="d side1">Vote Yellow</button>
+                <button class="d side2">Vote Blue</button>
+                </div>
+                <p class="date">The showdown ends in 6 days 5 hrs 45 min 48 s</p>
             </div>
         </section>
         <section id="gallery">
@@ -53,9 +63,16 @@
                 <h2 translate="no">gallery</h2>
             </header>
             <div class="white-container">
-                <img src="img1.jpg" alt="">
-                <img src="img2.jpg" alt="">
-                <img src="img3.jpg" alt="">
+                <div class="d gallery-flex">
+                    <img src="images/small1.jpg" alt="Graffiti painting of a girl standing with her arms crossed holding a lolipop. She has a white tank top with FREEDOM written on it.">
+                    <img src="images/small2.jpg" alt="Large apartment building with three boys painted on it two of them are holding roses and have roses flying around their head, the boy in the middle is holding his hands out as to be given something.">
+                    <img src="images/small3.jpg" alt="Graffiti painting of a man squating while holding his own cut off head. Yellow background with red smudges the man is black and white">
+                </div>
+                <div class="m gallery-flex">
+                    <img src="images/small1-tall.jpg" alt="Graffiti painting of a girl standing with her arms crossed holding a lolipop. She has a white tank top with FREEDOM written on it.">
+                    <img src="images/small2-tall.jpg" alt="Large apartment building with three boys painted on it two of them are holding roses and have roses flying around their head, the boy in the middle is holding his hands out as to be given something.">
+                    <img src="images/small3-tall.jpg" alt="Graffiti painting of a man squating while holding his own cut off head. Yellow background with red smudges the man is black and white">
+                </div>
                 <p>The winning artworks get entered into our <a href="gallery/">gallery</a>.</p>
             </div>
         </section>
@@ -71,59 +88,10 @@
                     You can read them <a href="rules/">here</a>.</p>
             </div>
         </section>
-        <div class="wall">
-            <div class="blue line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="blue line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="blue line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="blue line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="blue line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="blue line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="blue line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            <div class="line"><span class="brick half"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick half"></span></div>
-            <div class="line"><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span><span class="brick"></span></div>
-            
-        </div>
+        <footer>
+            <a href="https://bubliman.com">bubliman.com</a>
+            <a href="https://github.com/bubliman"><img src="images/github-mark-white.svg" alt="Github logo">Github</a>
+            <p>&copy;2023 bubliman</p>
+        </footer>
     </body>
 </html>
