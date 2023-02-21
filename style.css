@@ -307,9 +307,12 @@ button.side2 {
   flex-wrap:nowrap;
   
 }
+#gallery .white-container {
+  min-width:200px;
+}
 #gallery img {
-  min-height: 100%;
-  max-width: 100%;
+  min-height: 30%;
+  max-width: 30%;
   object-fit: cover;
   vertical-align: bottom;
 }
@@ -397,7 +400,12 @@ button.side2 {
   }
 }
 @media (min-width: 650px) {
-  
+  .d {
+    display:block;
+  }
+  .m {
+    display:none;
+  } 
 .showdown > img {
   margin: 30px auto;
   width: 30vw;
