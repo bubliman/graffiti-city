@@ -16,7 +16,7 @@
     --shadow-color2:var(--tertiary-color);
     --background-color:#000000;
     --normal-text-color:#FFFFFF;
-    --container-color:#D9D9D955;
+    --container-color:#333;
 
   /* size */
     --brick-width:150px;
@@ -25,13 +25,13 @@
   /* font */
     --font-family1:'a_attack_graffitiregular';
     --font-family2:'Almarai';
-    --font-h1-size: 4rem;
-    --font-h2-size: 3rem;
+    --font-h1-size: 6rem;
+    --font-h2-size: 4rem;
     --font-h3-size: 1.1rem;
 
     font-family: var(--font-family2), sans-serif;
     color: var(--normal-text-color);
-    font-size: 32px;
+    font-size: 22px;
   /* outline */
     
     --outline1:1px;
@@ -55,11 +55,15 @@
 }
 .showdown-flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px;
 }
 
-html, header#main-header, #rules header, #gallery header{
+html, header, section#showdown, footer{
   /**
  * Brick wall
    https://projects.verou.me/css3patterns/#bricks
@@ -76,7 +80,7 @@ html, header#main-header, #rules header, #gallery header{
    * Brick wall
      source: https://projects.verou.me/css3patterns/#bricks
    */
-   --scale: 3.4;
+   --scale: 2;
    --color1:#111;
    --color2:#1A1A1A;
     
@@ -87,9 +91,22 @@ html, header#main-header, #rules header, #gallery header{
   linear-gradient(335deg, var(--color1) calc(23px * var(--scale)), transparent calc(23px * var(--scale))),
   linear-gradient(155deg, var(--color2) calc(23px * var(--scale)), transparent calc(23px * var(--scale)));
   background-size: calc(58px * var(--scale)) calc(58px * var(--scale));
-  background-position: 0.4px calc(2.5px * var(--scale)), calc(4px * var(--scale)) calc(35px * var(--scale)),      calc(30.2px * var(--scale)) calc(31.3px * var(--scale)), calc(34px * var(--scale)) calc(6px * var(--scale));
+  background-position: 0.4px calc(2.5px * var(--scale)), calc(4px * var(--scale)) calc(35px * var(--scale)), calc(30.2px * var(--scale)) calc(31.3px * var(--scale)), calc(34px * var(--scale)) calc(6px * var(--scale));
 }
+section#showdown  {
+   /**
+   * Brick wall
+     source: https://projects.verou.me/css3patterns/#bricks
+   */
+   --scale: 2;
+   --color1:#AAAAAA33;
+   --color2:#DDD3;
+    
+  background-color: #444;
 
+  padding:0 0 50px;
+
+}
 html, body {
   padding: 0;
   margin: 0;
@@ -98,23 +115,37 @@ html, body {
   /* background-color: black; */
 }
 
-header#main-header, #rules header, #gallery header{
+header, footer{
   width: 100%;
   margin: 0;
   padding: 20px 0;
-  --scale: 3.4;
+  --scale: 3.3;
   background-color:#1A1A1A;
   --color1:#0007c544;
   --color2:#000AFF44;
   border-bottom: 6px solid var(--shadow-color1);
-  /* background-color:var(--secondary-color);
-  --color1:#0007c5;
-  --color2:#000AFF; */
-  
 }
 #gallery header , #rules header{
-  width: 30%;
+  border-top: 6px solid var(--shadow-color1);
+  /* width: 30%; */
   margin: 0 auto;
+}
+footer {
+  
+  border-bottom:none;
+  border-top: 6px solid var(--shadow-color1);
+}
+footer > div {
+  margin: 0 auto;
+  text-align:center;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+}
+footer a {
+  color:white;
+
 }
 h1, h2 {
     
@@ -208,65 +239,51 @@ h2.showdown, h2.versus {
       8px 8px var(--shadow-color2),
       10px 10px var(--shadow-color2);
 }
-#showdown-h2-1 {
-  position: relative;
-  top:145px;
-  right: 95px;
-  transform: matrix(0.99, 0.1, -0.09, 1, 0, 0);
+#showdown h2:first-child {
+  padding: 50px 0 0;
 }
-#showdown-h2-2 {
-  transform: matrix(0.92, -0.38, 0.33, 0.94, 0, 0);
-  position: relative;
-  top:130px;
-  right: -95px;
+h2.versus {
+  margin: 0 20px;
 }
 nav {
   max-width: 40%;
-  margin: 0px auto;
   display: flex;
   justify-content: space-evenly;
-  margin-top:20px;
+  margin:20px auto;
 
 }
 nav > a {
-  background-color: #111;
-  width: 150px;
-  height: 50px;
-  color:var(--normal-text-color);
-  /* border: 7px solid var(--shadow-color1); */
-  border-radius: 6px;
+  font-size: 1.2rem;
+  color:var(--shadow-color1);
   padding:20px;
   text-decoration: none;
   text-align:center;
-  /* text-align:center; */
+  box-shadow: 5px 10px 20px #0000;
+    border: 2px solid #0000;
 }
 nav > a:hover {
   color:var(--shadow-color1);
-  background-color: var(--background-color);
-  box-shadow: 5px 10px 7px var(--background-color);
+  /* background-color: var(--background-color); */
+  box-shadow: 5px 10px 20px var(--background-color);
+    border: 2px solid var(--background-color);
+
 }
 nav > a.current {
   /* border: 5px solid var(--primary-color); */
-}
-#showdown > header {
-  margin: 0 auto 200px;
-}
-.versus {
-  font-size: var(--font-h1-size);
 }
 
 .white-container {
   max-width: 700px;
   width: 30%;
   background-color: var(--container-color);
-  border-radius: 5px;
-  margin: 3% auto;
+  border-radius: 4vh;
+  margin: 50px auto;
   padding: 80px;
 }
 .white-container.vote {
   max-width: 1100px;
   width: 45%;
-  border-radius: 50px 50px 5px 5px;
+  border-radius: 50px 50px 4vh 4vh;
   padding: 0%;
 }
 .vote-bar {
@@ -313,11 +330,11 @@ div.side2 {
 }
 .vote button {
   color:var(--normal-text-color);
-  font-weight: 700;
+  font-weight: 500;
   background:none;
   border-radius: 8px;
-  font-size: 0.6rem;
-  padding:6px;
+  font-size: 2rem;
+  padding:10px;
   margin: 20px auto;
   border: 5px solid;
 }
@@ -328,7 +345,6 @@ button.side2 {
   border-color:var(--tertiary-color);
 }
 .date {
-  font-size: 0.6rem;
   text-align: center;
   margin:10px auto;
   padding:10px;
@@ -360,6 +376,8 @@ button.side2 {
   vertical-align: bottom;
 }
 
+
+
 @media (min-width: 2000px) {
   :root {
     --brick-width: 7.95vw;
@@ -370,7 +388,7 @@ button.side2 {
   :root {
     --font-h1-size: 3rem;
     --font-h2-size: 2rem;
-    font-size: 24px;
+    font-size: 18px;
 
     --outline4:0px;
     --negline4:calc((-1)*var(--outline4));
@@ -392,19 +410,7 @@ button.side2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-  }
-  .showdown > img {
-    margin: 30px auto;
-    width: calc(415px * 0.4);
-    height: calc(612px * 0.4);
-  }
-  .showdown > img.yellow {
-    border: 10px solid var(--secondary-color);
-    border-radius: 4px;
-  }
-  .showdown > img.blue {
-    border: 10px solid var(--tertiary-color);
-    border-radius: 4px;
+    align-content: center;
   }
   .percentage {
     font-size: 0.8rem;
@@ -413,7 +419,7 @@ button.side2 {
     height: 40px;
   }
   .white-container.vote {
-    border-radius: 30px 30px 5px 5px
+    border-radius: 30px 30px 10px 10px
   }
   .m.grid {
     display:grid;
@@ -453,18 +459,16 @@ button.side2 {
   margin: 30px auto;
   width: 30vw;
   height: 40vw;
-  max-width: 402px;
-  max-height: 612px;
+  max-width: 300px;
+  max-height: 450px;
 }
 .showdown > img.yellow {
-  border: 20px solid var(--secondary-color);
-  border-radius: 6px;
-  transform: rotate(-10deg);
+  border: 15px solid var(--secondary-color);
+  border-radius: 14px;
 }
 .showdown > img.blue {
-  border: 20px solid var(--tertiary-color);
-  border-radius: 6px;
-  transform: rotate(14deg);
+  border: 15px solid var(--tertiary-color);
+  border-radius: 14px;
 }
 }
 
