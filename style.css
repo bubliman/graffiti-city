@@ -155,6 +155,24 @@ h1, h2 {
     text-align:center;
     font-weight: 400;
 }
+section#rulesmain >ol {
+  width: 50%;
+  margin: 80px auto;
+}
+.gallery-flexbox {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin:80px auto;
+  
+}
+.gallery-flexbox > img {
+  width: 400px;
+  min-height: 30%;
+  max-width: 30%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
 h1 {
     padding: 75px 0;
     font-size: var(--font-h1-size);
@@ -330,9 +348,9 @@ div.side2 {
   font-weight: 500;
   background:none;
   border-radius: 8px;
-  font-size: 2rem;
+  font-size: 1rem;
   padding:10px;
-  margin: 20px auto;
+  margin: 5px auto;
   border: 5px solid;
 }
 button.side1 {
@@ -394,8 +412,27 @@ button.side2 {
     --negline5:calc((-1)*var(--outline5));
 
   }
+  .gallery-flexbox {
+    display: block;
+    margin: 80px auto;
+    width: 100%;
+    
+    
+  }
+  .gallery-flexbox img {
+    display:block;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
   .showdown > img {
     margin: 5% auto;
+    margin: 30px auto;
+  width: 30vw;
+  height: 40vw;
+  max-width: 300px;
+  max-height: 450px;
   }
   .d {
     display:none;
